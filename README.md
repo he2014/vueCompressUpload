@@ -4,8 +4,27 @@
 > 
 >npm i vue-compress-upload
 >
-# 实例
+# Example
 ```js
+ main.js 
+
+import Vue from 'vue';
+import App from './App';
+import vueCcompressUpload from "vue-compress-upload";
+Vue.config.productionTip = false;
+
+Vue.use(vueCcompressUpload);
+Vue.config.productionTip = false;
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+});
+
+
+app.vue
 <template>
   <div id="app">
     <vue-compress-upload :options="options" @imageCompress="imageCompress"></vue-compress-upload>
@@ -13,7 +32,7 @@
 </template>
 <script>
 import Vue from "vue";
-import vueCompressUpload from "vue-compress-upload";
+
 export default {
   name: "App",
   data() {

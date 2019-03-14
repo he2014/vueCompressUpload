@@ -1,35 +1,29 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
     <vue-compress-upload :options="options" @imageCompress="imageCompress"></vue-compress-upload>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import HelloWorld from "./components/HelloWorld";
-import vueCcompressUpload from "../dist/upload.js";
-Vue.use(vueCcompressUpload);
 export default {
   name: "App",
   data() {
     return {
       options: {
-        number: 0.7,
+        number: 0.4,
         filename: "file",
         btnClassName: "",
         btnTxt: "",
-        url: ""
+        url:
+          "http://10.10.32.164:6021/manager/upload?r=1552531099334&token=1505_ebd8938bc2ce462fb279b0ba68f78174"
       }
     };
   },
   methods: {
     imageCompress() {}
   },
-  components: {
-    HelloWorld
-  }
+  components: {}
 };
 </script>
 
